@@ -36,7 +36,7 @@ export default function getStarfield({ numStars = 500 } = {}) {
     size: 0.2,
     vertexColors: true,
     map: new THREE.TextureLoader().load(
-      "../../Images/star.png"    ),
+      "https://black2-o.github.io/Flame-Watch-Front-End-Live/Images/star.png"    ),
   });
   const points = new THREE.Points(geo, mat);
   return points;

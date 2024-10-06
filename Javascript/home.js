@@ -24,9 +24,9 @@ const detail = 12;
 const loader = new THREE.TextureLoader();
 const geometry = new THREE.IcosahedronGeometry(1, detail);
 const material = new THREE.MeshPhongMaterial({
-  map: loader.load("../Images/earthmap.png"),
-  specularMap: loader.load("../Images/earthspec1k.jpg.jpg"),
-  bumpMap: loader.load("../Images/earthbump1k.jpg"),
+  map: loader.load("https://black2-o.github.io/Flame-Watch-Front-End-Live/Images/earthmap.png"),
+  specularMap: loader.load("https://black2-o.github.io/Flame-Watch-Front-End-Live/Images/earthspec1k.jpg"),
+  bumpMap: loader.load("https://black2-o.github.io/Flame-Watch-Front-End-Live/Images/earthbump1k.jpg"),
   bumpScale: 4.0,
 });
 // material.map.colorSpace = THREE.SRGBColorSpace;
@@ -38,18 +38,18 @@ scene.add(star)
 
 
 const lightsMat = new THREE.MeshBasicMaterial({
-  map: loader.load("../Images/earthlights1k.jpg"),
+  map: loader.load("https://black2-o.github.io/Flame-Watch-Front-End-Live/Images/earthlights1k.jpg"),
   blending: THREE.AdditiveBlending,
 });
 const lightsMesh = new THREE.Mesh(geometry, lightsMat);
 earthGroup.add(lightsMesh);
 
 const cloudsMat = new THREE.MeshStandardMaterial({
-  map: loader.load("../Images/earthcloudmap.jpg"),
+  map: loader.load("https://black2-o.github.io/Flame-Watch-Front-End-Live/Images/earthcloudmap.jpg"),
   transparent: true,
   opacity: 0.5,
   blending: THREE.AdditiveBlending,
-  alphaMap: loader.load('../Images/earthcloudmaptrans.jpg'),
+  alphaMap: loader.load('https://black2-o.github.io/Flame-Watch-Front-End-Live/Images/earthcloudmaptrans.jpg'),
   alphaTest: 0.4,
 });
 const cloudsMesh = new THREE.Mesh(geometry, cloudsMat);
